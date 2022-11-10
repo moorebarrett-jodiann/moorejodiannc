@@ -16,19 +16,106 @@
     --app-dark-text-color: #1c1c1c;
 
     --app-letter-spacing: 0.2px;
-    --app-header-line-height: 56px;
+    --app-header-line-height: 100px;
     --app-text-line-height: 50px;
     --app-main-font-size: 17px;
     --app-secondary-font-size: 14px;
 }
     
 body {
-    background: var(--app-dark-grey-bg);
+    background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    /* overflow: hidden; */
+    padding:0;
+    margin:0px;
 }
 
 .container {
     width: min(100% - 30px, 1080px);
     margin-inline: auto;
+}
+
+/**************************************************/
+/*****       BACKGROUND ANIMATION            ******/
+/**************************************************/
+
+/* ============= Animation background ========= */
+/* .background {
+    background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding:0;
+    margin:0px;
+} */
+.cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #D7D4E4;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 12s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+    border-color: #FFF ;
+}
+.cube:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+}
+.cube:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+}
+.cube:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+}
+.cube:nth-child(5) {
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+}
+.cube:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+}
+
+/* Animate Background*/
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes cube {
+    from {
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+    to {
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
 }
 
 /**************************************************/
@@ -46,7 +133,7 @@ body {
 
 header {
     line-height: var(--app-header-line-height);
-    height: 56px;
+    height: 100px;
 }
 
 header h1 {
@@ -54,6 +141,15 @@ header h1 {
     font-size: var(--app-main-font-size);
     font-weight: 600;
     color: var(--app-light-text-color);
+}
+
+.profile-picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: url("../images/me.jpeg") center center / cover no-repeat;
+    display: inline-block;
+    margin: 20px 20px 0px 0px;
 }
 
 /* Show reular nav menu when screen width is 923px and above */
@@ -115,8 +211,7 @@ header h1 {
 
 .main {
     display: grid;
-    place-items: center;
-    
+    place-items: center;    
 }
 
 /**************************************************/
@@ -178,6 +273,8 @@ header h1 {
 
 .projects {
     text-align: center;
+    height: 600px;
+    background-color: var(--app-dark-bg);
 }
 
 .projects h2 {
@@ -283,11 +380,27 @@ header h1 {
     }
 }
 
+/**************************************************/
+/*****      CONTACT                          ******/
+/**************************************************/
 
+.contact {
+    text-align: center;
+    height: 600px;
+    background-color: var(--app-light-bg);
+}
 
+/**************************************************/
+/*****      FOOTER                           ******/
+/**************************************************/
 
+footer {
+    height: 112px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
 
-
-
-
-
+footer p {
+    color: var(--app-light-text-color);
+}
