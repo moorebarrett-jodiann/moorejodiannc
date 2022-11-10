@@ -230,7 +230,6 @@ header h1 {
 /**************************************************/
 
 .bio-container {
-    height: calc(100vh - 100px);
     display: grid;
     place-items: center;
 }
@@ -243,8 +242,21 @@ header h1 {
     color: var(--app-light-text-color);
 }
 
+/* flex cards with screen width 800px and up */
+@media (min-width: 801px) {
+    .biography p.intro-1 {
+        font-size: 50px;
+    }
+}
+
+/* flex cards with screen width 801px and down */
+@media (max-width: 800px) {
+    .biography p.intro-1 {
+        font-size: 30px;
+    }
+}
+
 .biography p.intro-1 {
-    font-size: 50px;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
@@ -304,7 +316,6 @@ header h1 {
 .about-me {
     text-align: center;
     background-color: var(--app-white);
-    height: 100vh;
     padding: 40px 0px;
     display: grid;
     place-items: center;
@@ -423,7 +434,6 @@ header h1 {
 .contact {
     text-align: center;
     background-color: var(--app-dark-bg);
-    height: 50vh;
     padding: 40px 0px;
 }
 
