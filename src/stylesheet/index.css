@@ -116,6 +116,7 @@ header h1 {
 .main {
     display: grid;
     place-items: center;
+    
 }
 
 /**************************************************/
