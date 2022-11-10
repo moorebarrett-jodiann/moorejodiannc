@@ -18,8 +18,8 @@
     --app-letter-spacing: 0.2px;
     --app-header-line-height: 56px;
     --app-text-line-height: 50px;
-    --app-h2-font-size: 17px;
-    --app-p-font-size: 14px;
+    --app-main-font-size: 17px;
+    --app-secondary-font-size: 14px;
 }
     
 body {
@@ -45,13 +45,13 @@ body {
 /**************************************************/
 
 header {
-    /* background-color: var(--app-dark-grey-bg); */
     line-height: var(--app-header-line-height);
     height: 56px;
 }
 
 header h1 {
-    font-size: 25px;
+    text-transform: uppercase;
+    font-size: var(--app-main-font-size);
     font-weight: 600;
     color: var(--app-light-text-color);
 }
@@ -99,7 +99,7 @@ header h1 {
     .burger-menu {
         display: block;
         color: var(--app-light-text-color);
-        font-size: 17px;
+        font-size: var(--app-main-font-size);
         line-height:  var(--page-header-line-height);
     }
     
@@ -114,7 +114,6 @@ header h1 {
 /**************************************************/
 
 .main {
-    height: 100vh;
     display: grid;
     place-items: center;
 }
@@ -123,8 +122,20 @@ header h1 {
 /*****      BIOGRPAPHY                       ******/
 /**************************************************/
 
+.bio-container {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
 .biography {
+    width: 600px;
     text-align: center;
+}
+
+.biography p {
+    font-size: var(--app-main-font-size);
+    color: var(--app-light-text-color);
 }
 
 .biography p, .biography button {
@@ -141,19 +152,23 @@ header h1 {
 }
 
 .biography button {
-    width: 80px;
-    height: 40px;
+    border-radius: 5px;    
     text-align: center;
-    background-color: var(--app-blue);
-    border: 1px solid var(--app-blue);
-    border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
-    font-size: 12px;
-    font-weight: 600;
+    width: 100px;
+    background-color: var(--app-green);
+    margin-top: 10px;
+    padding: 5px 10px; 
+    font-size: var(--app-main-font-size);
+    font-weight: 700;
+    color: var(--app-light-text-color);
     letter-spacing: 0.2px;
-    transition: all 0.4s ease-in-out;
-    color: #fff;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.biography button:hover { 
+    background-color: var(--app-blue);
     cursor: pointer;
+    color: var(--app-light-text-color);
 }
 
 /**************************************************/
@@ -194,7 +209,7 @@ header h1 {
 }
 
 .projects .row .card p {
-    font-size: 14px;
+    font-size: var(--app-secondary-font-size);
     font-weight: 400;
     color: var(--app-dark-grey-bg);
 }
@@ -234,7 +249,7 @@ header h1 {
 }
 
 .card-btn a {
-    font-size: 14px;
+    font-size: var(--app-secondary-font-size);
     font-weight: 700;
     color: var(--app-light-text-color);
     text-decoration: none;
