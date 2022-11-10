@@ -10,6 +10,7 @@ function select(selector, parent = document) {
     return parent.querySelector(selector);
 }
 
+// Array of Biography sentences for home page
 const content = [
     'A Full-Stack developer and student based in Winnipeg',
     'I have 9 Certifications across the fields of DevOps, UX/UI and HCI',
@@ -21,7 +22,7 @@ const bioButton = select('.biography button');
 let n = 0;
 
 // load hello world text after page load
-window.addEventListener('load', () => {
+onEvent('load', window, () => {
 
     bioParagraph.classList.add('is-visible');
     setTimeout(() => {
