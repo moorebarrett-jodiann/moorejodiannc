@@ -1,0 +1,24 @@
+{
+  "name": "moorejodiannc",
+  "version": "1.0.0",
+  "description": "View My [Official Website](https://moorebarrett-jodiann.github.io/moorejodiannc/)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moorebarrett-jodiann/moorejodiannc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moorebarrett-jodiann/moorejodiannc/issues"
+  },
+  "homepage": "https://github.com/moorebarrett-jodiann/moorejodiannc#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
