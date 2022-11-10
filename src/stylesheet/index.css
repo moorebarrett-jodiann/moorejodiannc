@@ -56,9 +56,11 @@ body {
     transform: scale(0) rotate(0deg) translate(-50%, -50%);
     animation: cube 12s ease-in forwards infinite;
 }
+
 .cube:nth-child(2n) {
     border-color: var(--app-light-bg) ;
 }
+
 .cube:nth-child(2) {
     animation-delay: 2s;
     left: 25vw;
@@ -165,13 +167,33 @@ header h1 {
         font-weight: 600;
         letter-spacing: var(--app-letter-spcaing);
         cursor: pointer;
-        transition: color 0.25s ease-in-out;
         text-decoration: none;
         color: var(--app-light-text-color);
+        position: relative;
+    }
+
+    /* Scale from center */
+    nav ul li a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.1em;
+        background-color: var(--app-light-text-color);
+        opacity: 0;
+        transition: opacity 300ms, transform 300ms;
+    }
+
+    nav ul li a::after {
+        opacity: 1;
+        transform: scale(0);
+        transform-origin: center;
     }
     
-    nav ul li a:hover {
-        border-bottom: 1px solid var(--app-light-text-color);
+    nav ul li a:hover::after,
+    nav ul li a:focus::after{
+        transform: scale(1);
     }
 }
 
@@ -364,9 +386,16 @@ header h1 {
     margin-right: 10px;
     font-size: 15px;
     background: rgba(153,153,153,.2);
+    box-shadow: 0 0 1px rgb(0 0 0 / 0%);
     font-weight: 600;
     display: flex;
     flex-wrap: wrap;
+    transition: all 0.4s ease-in-out;
+}
+
+.skills:hover {
+    background-color: #2098D1;
+    color: white;
 }
 
 /* flex cards with screen width 800px and up */
