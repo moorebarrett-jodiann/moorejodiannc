@@ -5,7 +5,6 @@
     --app-light-grey:#adadb0;
     --app-dark-bg:#131313;
     --app-light-bg:#e0e0e0;
-    --app-light-text-color:#f4f6f8;
     --app-white:#f1f2f3;
     --app-pink:#FC415A;
     --app-green:#46737C;
@@ -17,6 +16,7 @@
     --app-btn-width: 100%;
     --app-light-text-color: #f4f6f8;
     --app-dark-text-color: #1c1c1c;
+    --app-grey-text-color: #343434;
 
     --app-letter-spacing: 0.2px;
     --app-header-line-height: 100px;
@@ -208,7 +208,7 @@ header h1 {
 /**************************************************/
 
 .bio-container {
-    height: 100vh;
+    height: calc(100vh - 100px);
     display: grid;
     place-items: center;
 }
@@ -273,13 +273,15 @@ header h1 {
     background-color: var(--app-white);
     height: 100vh;
     padding: 40px 0px;
+    display: grid;
+    place-items: center;
 }
 
 .sub-heading {
     text-align: center;
     display: grid;
     place-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10%;
 }
 
 .about-me h2 {
@@ -288,7 +290,8 @@ header h1 {
 }
 
 .about-me .sub-heading p {
-    color: var(--app-dark-text-color);
+    color: var(--app-grey-text-color);
+    margin-top: 10px;
 }
 
 .about-me span.sub-heading-line {
@@ -314,29 +317,56 @@ header h1 {
     text-align: left;
 }
 
+.about-me .row .card .flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .about-me .row .card h3 {
-    font-size: var(--app-main-font-size);
+    font-size: 20px;
     font-weight: 700;
-    color: var(--app-blue);
+    color: var(--app-dark-text-color);
+    margin-bottom: 20px;
 }
 
 .about-me .row .card p {
     font-weight: 400;
-    color: var(--app-dark-grey-bg);
+    color: var(--app-grey-text-color);
+}
+
+.about-me .row .card a.about-contact-link {
+    font-weight: 400;
+    color: var(--app-purple);
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.about-me .row .card article p + p {
+    margin-top: 10px;
 }
 
 .skills {
     background-color: var(--app-light-grey);
     border-radius: 5px;
-    padding: 10px;
-    display: inline;
-    margin: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    background: rgba(153,153,153,.2);
+    font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 
 /* flex project cards with screen width 800px and up */
 @media (min-width: 801px) {
     .about-me .row .card {
         width: calc(25% - 15px);
+    }
+
+    .about-me .row .card + .card {
+        margin-left: 40px;
     }
 }
 
@@ -344,6 +374,10 @@ header h1 {
 @media (max-width: 800px) {
     .about-me .row .card {
         width: calc(50% - 10px);
+    }
+
+    .about-me .row .card + .card {
+        margin-left: 40px;
     }
 }
 
@@ -361,7 +395,7 @@ header h1 {
 .contact {
     text-align: center;
     height: 600px;
-    background-color: var(--app-light-bg);
+    background-color: var(--app-pink);
 }
 
 .social-icons ul li {
@@ -391,9 +425,9 @@ footer {
     text-align: center;
     display: grid;
     place-items: center;
-    background-color: var(--app-dark-bg);
+    background-color: var(--app-white);
 }
 
 footer p {
-    color: var(--app-light-text-color);
+    color: var(--app-dark-text-color);
 }
