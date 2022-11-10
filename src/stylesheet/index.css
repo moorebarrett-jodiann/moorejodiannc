@@ -554,3 +554,32 @@ footer {
 footer p {
     color: var(--app-dark-text-color);
 }
+
+/**************************************************/
+/*****      BACK TO TOP BUTTON               ******/
+/**************************************************/
+
+#scroll-btn {       
+    opacity: 0;   
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: var(--app-pink);
+    position: fixed;
+    bottom: 10%;
+    right: 10%;    
+    border: 2px solid #fff;
+    border-radius: 50%; 
+    transition: opacity 0.5s, transform 0.5s;
+}
+#scroll-btn.show {      
+    opacity: 1;  
+    transition: opacity 1s, transform 1s;     
+}
+
+
+
+
+
+
+
