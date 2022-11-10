@@ -6,7 +6,7 @@
     --app-dark-bg:#131313;
     --app-light-bg:#e0e0e0;
     --app-white:#f1f2f3;
-    --app-pink:#FC415A;
+    --app-pink:#E64398;
     --app-green:#46737C;
     --app-purple:#591BC5;
     --app-orange:#ff833c;
@@ -358,8 +358,7 @@ header h1 {
     flex-wrap: wrap;
 }
 
-
-/* flex project cards with screen width 800px and up */
+/* flex cards with screen width 800px and up */
 @media (min-width: 801px) {
     .about-me .row .card {
         width: calc(25% - 15px);
@@ -370,18 +369,14 @@ header h1 {
     }
 }
 
-/* flex project cards with screen width 801px and down */
+/* flex cards with screen width 801px and down */
 @media (max-width: 800px) {
     .about-me .row .card {
         width: calc(50% - 10px);
     }
-
-    .about-me .row .card + .card {
-        margin-left: 40px;
-    }
 }
 
-/* flex project cards with screen width 480px and down */
+/* flex cards with screen width 480px and down */
 @media (max-width: 480px) {
     .about-me .row .card {
         width: 100%;
@@ -394,8 +389,91 @@ header h1 {
 
 .contact {
     text-align: center;
-    height: 600px;
+    background-color: var(--app-dark-bg);
+    height: 100vh;
+    padding: 40px 0px;
+}
+
+.contact .sub-heading {
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.contact h2 {
+    color: var(--app-light-text-color);
+    text-transform: uppercase;
+}
+
+.contact .sub-heading p {
+    color: var(--app-light-text-color);
+    margin-top: 10px;
+}
+
+.contact span.sub-heading-line {
+    width: 30px;
+    height: 6px;
     background-color: var(--app-pink);
+    border-radius: 50px;
+    display: block;
+    margin: 10px 0px;
+}
+
+.contact .row {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.contact .row .card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    height: 100px;
+}
+
+.contact .row .card h2 span {
+    color: var(--app-pink);
+    font-size: 18px;
+}
+
+.contact .row .card p {
+    color: var(--app-light-text-color);
+}
+
+.contact .row .card p a {
+    color: var(--app-pink);
+    text-decoration: none;
+}
+
+.contact .row .card + .card {
+    margin-left: 20px;
+}
+
+/* flex cards with screen width 800px and up */
+@media (min-width: 801px) {
+    .contact .row .card {
+        width: calc(25% - 15px);
+    }
+
+    .contact .row .card + .card {
+        margin-left: 40px;
+    }
+}
+
+/* flex cards with screen width 801px and down */
+@media (max-width: 800px) {
+    .contact .row .card {
+        width: calc(50% - 10px);
+    }
+}
+
+/* flex cards with screen width 480px and down */
+@media (max-width: 480px) {
+    .contact .row .card {
+        width: 100%;
+    }
 }
 
 .social-icons ul li {
@@ -404,8 +482,13 @@ header h1 {
     height: 35px;
     cursor: default;
     border-radius: 50%;
-    padding: 6px 0;
-    transition: background-color 0.25s ease-in-out;
+    padding: 6px;
+    transition: color 0.25s ease-in-out;
+    font-size: 30px;
+}
+
+.social-icons ul li + li {
+    margin-left: 5px;
 }
 
 .social-icons ul li i {
@@ -414,6 +497,43 @@ header h1 {
     text-align: center;
     color: var(--app-white);
     transition: color 0.25s ease-in-out;
+}
+
+/* transition for social icon hover animation */
+.fa-linkedin-in,
+.fa-github,
+.fa-youtube,
+.fa-twitter {
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+/* social media icons hover color */
+.fa-linkedin-in:hover,
+.fa-linkedin-in:focus {
+  color: #1877f2;
+  transform: scale(1.1);
+}
+
+/* social media icons hover color */
+.fa-twitter:hover,
+.fa-twitter:focus {
+  color: #1da1f2;
+  transform: scale(1.1);
+}
+
+/* social media icons hover color */
+.fa-github:hover,
+.fa-github:focus {
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* social media icons hover color */
+.fa-youtube:hover,
+.fa-youtube:focus {
+  color: #df2426;
+  transform: scale(1.1);
 }
 
 /**************************************************/
