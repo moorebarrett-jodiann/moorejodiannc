@@ -45,7 +45,7 @@ body {
 /**************************************************/
 
 header {
-    background-color: var(--app-dark-grey-bg);
+    /* background-color: var(--app-dark-grey-bg); */
     line-height: var(--app-header-line-height);
     height: 56px;
 }
@@ -112,3 +112,56 @@ header h1 {
 /**************************************************/
 /*****      MAIN                             ******/
 /**************************************************/
+
+.main {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/**************************************************/
+/*****      BIOGRPAPHY                       ******/
+/**************************************************/
+
+.biography {
+    text-align: center;
+    width: 500px;
+}
+
+.biography p, .biography button {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease-in-out;
+}
+
+.biography p.is-visible, button.is-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.biography button {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    background-color: var(--app-blue);
+    border: 1px solid var(--app-blue);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition: all 0.4s ease-in-out;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
