@@ -1,0 +1,114 @@
+@import "./reset.css";
+
+:root {
+    --app-dark-grey-bg:#2c2d33;
+    --app-dark-bg:#131313;
+    --app-light-bg:#e0e0e0;
+    --app-light-text-color:rgb(244, 246, 248);
+    --app-red:#ff3c57;
+    --app-green:#46737C;
+    --app-purple:#833cff;
+    --app-orange:#ff833c;
+    --app-blue:#2B50B3;
+    --app-btn-height: 46px;
+    --app-btn-width: 100%;
+    --app-light-text-color: #f4f6f8;
+    --app-dark-text-color: #1c1c1c;
+
+    --app-letter-spacing: 0.2px;
+    --app-header-line-height: 56px;
+    --app-text-line-height: 50px;
+    --app-h2-font-size: 17px;
+    --app-p-font-size: 14px;
+}
+    
+body {
+    background: var(--app-dark-grey-bg);
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+/**************************************************/
+/*****       Main                            ******/
+/**************************************************/
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+/**************************************************/
+/*****      HEADER                           ******/
+/**************************************************/
+
+header {
+    background-color: var(--app-dark-grey-bg);
+    line-height: var(--app-header-line-height);
+    height: 56px;
+}
+
+header h1 {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--app-light-text-color);
+}
+
+/* Show reular nav menu when screen width is 923px and above */
+@media only screen and (min-width: 923px) { 
+
+    .burger-menu i {
+        display: none;
+    }
+    
+    nav ul {
+        list-style: none;
+    }
+    
+    nav ul li {
+        display: inline;
+    }
+    
+    nav ul li + li {
+        margin-left: 18px;
+    }
+    
+    nav ul li a {
+        font-size: var(--app-main-font-size);
+        font-weight: 600;
+        letter-spacing: var(--app-letter-spcaing);
+        cursor: pointer;
+        transition: color 0.25s ease-in-out;
+        text-decoration: none;
+        color: var(--app-light-text-color);
+    }
+    
+    nav ul li a:hover {
+        border-bottom: 1px solid var(--app-light-text-color);
+    }
+}
+
+/* Show hamburger icon when screen width is below 922px */
+@media only screen and (max-width: 922px) {
+    nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        color: var(--app-light-text-color);
+        font-size: 17px;
+        line-height:  var(--page-header-line-height);
+    }
+    
+    .burger-menu:hover {
+        display: block;
+        color: var(--app-purple);
+    }
+}
+
+/**************************************************/
+/*****      MAIN                             ******/
+/**************************************************/
