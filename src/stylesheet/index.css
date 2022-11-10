@@ -231,17 +231,28 @@ header h1 {
     font-size: var(--app-main-font-size);
 }
 
-.biography p.intro-2, .biography button {
+.biography p.intro-2{
     visibility: hidden;
     opacity: 0;
     transform: translateY(-10px);
     transition: all 0.4s ease-in-out;
 }
 
-.biography p.intro-2.is-visible, button.is-visible {
+.biography p.intro-2.is-visible {
     visibility: visible;
     opacity: 1;
     transform: translateY(0px);
+}
+
+.biography button {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.biography button.is-visible {
+    visibility: visible;
+    opacity: 1;
 }
 
 .biography button {
@@ -250,12 +261,12 @@ header h1 {
     width: 100px;
     background-color: var(--app-dark-bg);
     margin-top: 10px;
-    padding: 5px 10px; 
+    padding: 10px 10px; 
     font-size: 14px;
     font-weight: 700;
     color: var(--app-light-text-color);
     letter-spacing: 0.2px;
-    transition: background-color 0.25s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .biography button:hover { 
@@ -372,13 +383,6 @@ header h1 {
 /* flex cards with screen width 801px and down */
 @media (max-width: 800px) {
     .about-me .row .card {
-        width: calc(50% - 10px);
-    }
-}
-
-/* flex cards with screen width 480px and down */
-@media (max-width: 480px) {
-    .about-me .row .card {
         width: 100%;
     }
 }
@@ -390,7 +394,7 @@ header h1 {
 .contact {
     text-align: center;
     background-color: var(--app-dark-bg);
-    height: 100vh;
+    height: 50vh;
     padding: 40px 0px;
 }
 
@@ -496,7 +500,7 @@ header h1 {
     width: 100%;
     text-align: center;
     color: var(--app-white);
-    transition: color 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 /* transition for social icon hover animation */
@@ -525,7 +529,6 @@ header h1 {
 /* social media icons hover color */
 .fa-github:hover,
 .fa-github:focus {
-  color: #000;
   transform: scale(1.1);
 }
 
