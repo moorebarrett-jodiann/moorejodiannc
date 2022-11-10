@@ -125,7 +125,6 @@ header h1 {
 
 .biography {
     text-align: center;
-    width: 500px;
 }
 
 .biography p, .biography button {
@@ -155,6 +154,117 @@ header h1 {
     transition: all 0.4s ease-in-out;
     color: #fff;
     cursor: pointer;
+}
+
+/**************************************************/
+/*****      PROJECTS                         ******/
+/**************************************************/
+
+.projects {
+    text-align: center;
+}
+
+.projects h2 {
+    margin: 40px 0px;
+    color: var(--app-light-text-color);
+}
+
+.projects .row {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+
+.projects .row .card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: 5px;
+    background-color: var(--app-light-text-color);
+    box-shadow: 0 20px 48px 0 var(--app-shadow-color);
+    transition: transform 450ms;
+    padding: 20px;
+}
+
+.projects .row .card h3 {
+    font-size: var(--app-main-font-size);
+    font-weight: 700;
+    color: var(--app-blue);
+    text-transform: uppercase;
+}
+
+.projects .row .card p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--app-dark-grey-bg);
+}
+
+.projects .row .card:hover {
+    transform: translateY(-10px);
+}
+
+.projects .row .card div.top p{
+    margin: 10px 0 20px 0;
+}
+
+.projects .row .card div.top p span{
+    font-size: 10px;
+    color: var(--app-dark-text-color);
+}
+
+.projects .row .card div.top {
+    flex: 1;
+}
+  
+.projects .row .card .down {
+    flex: none;
+    text-align: center;
+    width: 100%;
+}
+
+.card-btn { 
+    display: inline-block;
+    border-radius: 5px;    
+    text-align: center;
+    width: 100px;
+    background-color: var(--app-green);
+    margin-top: 10px;
+    padding: 5px 10px; 
+    transition: background-color 0.25s ease-in-out;   
+}
+
+.card-btn a {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--app-light-text-color);
+    text-decoration: none;
+}
+
+.card-btn:hover { 
+    background-color: var(--app-blue);
+    cursor: pointer;
+    color: var(--app-light-text-color);
+}
+
+/* flex project cards with screen width 800px and up */
+@media (min-width: 801px) {
+    .projects .row .card {
+        width: calc(25% - 15px);
+    }
+}
+
+/* flex project cards with screen width 801px and down */
+@media (max-width: 800px) {
+    .projects .row .card {
+        width: calc(50% - 10px);
+    }
+}
+
+/* flex project cards with screen width 480px and down */
+@media (max-width: 480px) {
+    .projects .row .card {
+        width: 100%;
+    }
 }
 
 
