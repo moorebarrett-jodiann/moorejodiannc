@@ -648,7 +648,7 @@ footer p {
     background-color: var(--app-pink);
     position: fixed;
     bottom: 10%;
-    right: 10%;    
+    right: 15%;    
     border: 2px solid #fff;
     border-radius: 50%; 
     transition: opacity 0.5s, transform 0.5s;
