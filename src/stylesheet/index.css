@@ -248,6 +248,10 @@ header h1 {
     .biography p.intro-1 {
         font-size: 50px;
     }
+
+    .biography p.intro-2 {
+        font-size: var(--app-main-font-size);
+    }
 }
 
 /* flex cards with screen width 801px and down */
@@ -255,15 +259,15 @@ header h1 {
     .biography p.intro-1 {
         font-size: 30px;
     }
+
+    .biography p.intro-2 {
+        font-size: var(--app-secondary-font-size);
+    }
 }
 
 .biography p.intro-1 {
     text-transform: uppercase;
     margin-bottom: 10px;
-}
-
-.biography p.intro-2 {
-    font-size: var(--app-main-font-size);
 }
 
 .biography p.intro-2{
@@ -322,11 +326,13 @@ header h1 {
     place-items: center;
 }
 
-.sub-heading {
+.about-me .sub-heading {
     text-align: center;
     display: grid;
     place-items: center;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    border-bottom: 1px solid rgb(225, 225, 226);
 }
 
 .about-me h2 {
@@ -375,6 +381,7 @@ header h1 {
 }
 
 .about-me .row .card p {
+    font-size: var(--app-main-font-size);
     font-weight: 400;
     color: var(--app-grey-text-color);
 }
@@ -384,6 +391,10 @@ header h1 {
     color: var(--app-purple);
     margin-top: 20px;
     text-decoration: none;
+}
+
+.about-me .row .card article p {
+    font-size: 15px;
 }
 
 .about-me .row .card article p + p {
@@ -419,12 +430,25 @@ header h1 {
     .about-me .row .card + .card {
         margin-left: 40px;
     }
+
+    .about-me .row .card h3 {
+        font-size: 20px;
+    }
 }
 
 /* flex cards with screen width 801px and down */
 @media (max-width: 800px) {
     .about-me .row .card {
         width: 100%;
+        text-align: center;
+    }
+
+    .about-me .row .card + .card {
+        margin-top: 20px;
+    }
+
+    .about-me .row .card h3 {
+        font-size: 18px;
     }
 }
 
@@ -436,11 +460,17 @@ header h1 {
     text-align: center;
     background-color: var(--app-dark-bg);
     padding: 40px 0px;
+    text-align: center;
+    display: grid;
 }
 
 .contact .sub-heading {
     text-align: center;
+    display: grid;
+    place-items: center;
     margin: 40px 0px;
+    padding-bottom: 5%;
+    border-bottom: 1px solid rgba(225, 225, 226, 0.2);
 }
 
 .contact h2 {
@@ -491,10 +521,6 @@ header h1 {
     text-decoration: none;
 }
 
-.contact .row .card + .card {
-    margin-left: 20px;
-}
-
 /* flex cards with screen width 800px and up */
 @media (min-width: 801px) {
     .contact .row .card {
@@ -502,7 +528,7 @@ header h1 {
     }
 
     .contact .row .card + .card {
-        margin-left: 40px;
+        margin-left: 20px;
     }
 }
 
@@ -511,12 +537,24 @@ header h1 {
     .contact .row .card {
         width: calc(50% - 10px);
     }
+
+    .contact .row .card + .card {
+        margin-left: 20px;
+    }
 }
 
 /* flex cards with screen width 480px and down */
 @media (max-width: 480px) {
     .contact .row .card {
         width: 100%;
+    }
+    
+    .social-icons ul li + li {
+        margin-top: 10px;
+    }
+    
+    .contact .row .card + .card {
+        margin-top: 20px;
     }
 }
 
@@ -529,10 +567,6 @@ header h1 {
     padding: 6px;
     transition: color 0.25s ease-in-out;
     font-size: 25px;
-}
-
-.social-icons ul li + li {
-    margin-left: 10px;
 }
 
 .social-icons ul li i {
