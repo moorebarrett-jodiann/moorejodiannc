@@ -67,26 +67,8 @@ const scrollTop = function () {
           scrollWindow();
         }, 10);
       }
-      // var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-      
-      // if(viewportWidth > 991) {
-
-      //   console.log('desktop');
-      //   var offsetTop = select("#header").top - 300;
-      //   window.scrollTo({
-      //     top: offsetTop,
-      //     behavior: 'smooth'
-      //   });
-
-      // } else {
-
-      //   console.log('mobile');
-      //   select("#header").scrollIntoView({block: "start", behavior: "smooth"});
-      // }
     };
     scrollBtn.addEventListener("click", scrollWindow);
-
-    
 };
 
 // call scrollTop function

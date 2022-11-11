@@ -128,7 +128,7 @@ body {
 header {
     line-height: var(--app-header-line-height);
     height: 100px;
-    min-width: 480px;
+    min-width: 412px;
 }
 
 header h1 {
@@ -237,7 +237,7 @@ header h1 {
     display: grid;
     place-items: center;
     height: calc(100vh - 100px);
-    min-width: 480px;
+    min-width: 400px;
 }
 
 .biography {
@@ -329,7 +329,7 @@ header h1 {
     padding: 40px 0px;
     display: grid;
     place-items: center;
-    min-width: 480px;
+    min-width: 412px;
 }
 
 .about-me .sub-heading {
@@ -468,7 +468,7 @@ header h1 {
     padding: 40px 0px;
     text-align: center;
     display: grid;
-    min-width: 480px;
+    min-width: 412px;
 }
 
 .contact .sub-heading {
