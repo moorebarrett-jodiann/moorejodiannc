@@ -12,7 +12,7 @@ function select(selector, parent = document) {
 
 // Array of Biography sentences for home page
 const content = [
-    'A Full-Stack developer and student based in Winnipeg',
+    'A Full-Stack Software Developer and student based in Winnipeg',
     'I have 9 Certifications across the fields of DevOps, UX/UI and HCI',
     'I am originally from Jamaica',
     'I have a 7 year career in IT'
@@ -61,11 +61,28 @@ const scrollTop = function () {
 
     // scroll to top when button clicked
     const scrollWindow = function () {
-      if (window.scrollY != 0) {
-        setTimeout(function () {
-          window.scrollTo(0, window.scrollY - 300);
-          scrollWindow();
-        }, 10);
+      // if (window.scrollY != 0) {
+      //   setTimeout(function () {
+      //     window.scrollTo(0, window.scrollY - 300);
+      //     scrollWindow();
+      //   }, 10);
+      // }
+
+      var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+      
+      if(viewportWidth > 991) {
+
+        console.log('desktop');
+        var offsetTop = select("#header").top - 300;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+
+      } else {
+
+        console.log('mobile');
+        select("#header").scrollIntoView({block: "start", behavior: "smooth"});
       }
     };
     scrollBtn.addEventListener("click", scrollWindow);
