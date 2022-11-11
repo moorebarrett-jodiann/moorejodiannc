@@ -27,7 +27,7 @@
     
 body {
     background: linear-gradient(132deg, var(--app-pink), var(--app-purple), var(--app-dark-blue));
-    background-size: 400% 400%;
+    background-size: 200% 200%;
     animation: Gradient 15s ease infinite;
     position: relative;
     height: 100vh;
@@ -73,13 +73,13 @@ body {
 
 .cube:nth-child(4) {
     animation-delay: 6s;
-    left: 50vw;
+    left: 90vw;
     top: 10vh;
 }
 
 .cube:nth-child(5) {
     animation-delay: 8s;
-    left: 70vw;
+    left: 10vw;
     top: 85vh;
 }
 
@@ -101,6 +101,7 @@ body {
         background-position: 0% 50%;
     }
 }
+
 @keyframes cube {
     from {
         transform: scale(0) rotate(0deg) translate(-50%, -50%);
